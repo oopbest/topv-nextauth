@@ -39,9 +39,15 @@ export default function Home() {
   return (
     <>
       <div className="text-2xl font-bold my-4">My App</div>
-      {loginElem}
-      {session}
-      {session?.user}
+      {/* {loginElem} */}
+      {session && (
+        <>
+          <h3>Debug ja</h3>
+          <p>{session.user?.name}</p>
+          {session.user?.email}
+          {session.user?.image}
+        </>
+      )}
     </>
   );
 }
