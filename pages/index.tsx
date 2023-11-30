@@ -29,7 +29,7 @@ export default function Home() {
   if (session && session.user) {
     loginElem = (
       <div>
-        Logged in as {session.user.email}
+        Logged in as {session?.user.name} {session.user.email}
         <button onClick={() => signOut()}>Logout</button>
       </div>
     );
