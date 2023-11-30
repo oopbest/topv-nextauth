@@ -41,12 +41,27 @@ export default function Home() {
     <>
       <div className="text-2xl font-bold my-4">My App</div>
       {/* {loginElem} */}
-      {session && (
+      {session && session.user ? (
         <>
-          <h3>Debug ja</h3>
+          <h3>Debug naja</h3>
           <h5>{session.user?.name}</h5>
           <h5>{session.user?.email}</h5>
           <button onClick={() => signOut()}>Logout</button>
+        </>
+      ) : (
+        <>
+          <button
+            className="p-3 bg-blue-600 text-white font-bold rounded"
+            onClick={() => handleLoginWithGoogle()}
+          >
+            Login with Google
+          </button>
+          <button
+            className="p-3 bg-blue-600 text-white font-bold rounded"
+            onClick={() => handleLoginWithApple()}
+          >
+            Login with Apple
+          </button>
         </>
       )}
     </>
