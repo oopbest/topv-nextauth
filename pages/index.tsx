@@ -46,6 +46,7 @@ export default function Home() {
           <h3>Debug ja</h3>
           <h5>{session.user?.name}</h5>
           <h5>{session.user?.email}</h5>
+          <button onClick={() => signOut()}>Logout</button>
         </>
       )}
     </>
