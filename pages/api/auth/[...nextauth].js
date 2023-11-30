@@ -8,12 +8,7 @@ export const authOptions = {
     AppleProvider({
       clientId: process.env.APPLE_CLIENT_ID,
       clientSecret: process.env.APPLE_CLIENT_SECRET,
-      async profile(profile) {
-        console.log(req.body)
-        return {
-
-        }
-      }
+      params: { scope: "name email", response_mode: "form_post" },
     }),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
