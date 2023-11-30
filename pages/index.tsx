@@ -29,9 +29,8 @@ export default function Home() {
   if (session && session.user) {
     loginElem = (
       <div>
-        <p>Debug</p>
+        <p>Debug </p>
         Logged in as {session.user.email}
-        <p>{session.user.name}</p>
         <button onClick={() => signOut()}>Logout</button>
       </div>
     );
@@ -41,6 +40,8 @@ export default function Home() {
     <>
       <div className="text-2xl font-bold my-4">My App</div>
       {loginElem}
+      {session}
+      {session?.user}
     </>
   );
 }
