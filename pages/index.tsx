@@ -1,3 +1,4 @@
+import { Session } from "next-auth";
 import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Home() {
@@ -43,9 +44,8 @@ export default function Home() {
       {session && (
         <>
           <h3>Debug ja</h3>
-          <p>{session.user?.name}</p>
-          {session.user?.email}
-          {session.user?.image}
+          <h5>{session.user?.name}</h5>
+          <h5>{session.user?.email}</h5>
         </>
       )}
     </>
