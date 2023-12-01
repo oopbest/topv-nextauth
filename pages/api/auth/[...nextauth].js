@@ -7,7 +7,10 @@ export const authOptions = {
   providers: [
     AppleProvider({
       clientId: process.env.APPLE_CLIENT_ID,
-      clientSecret: process.env.APPLE_CLIENT_SECRET
+      clientSecret: process.env.APPLE_CLIENT_SECRET,
+      authorization: {
+        params: { scope: "email", response_mode: "web_message" },
+      }
     }),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,

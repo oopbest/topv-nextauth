@@ -43,7 +43,7 @@ export default function Home() {
       {/* {loginElem} */}
       {session && session.user ? (
         <>
-          <h3>Debug x10</h3>
+          <h3>Debug x11</h3>
           <h5>{session.user.email}</h5>
           <button onClick={() => signOut()}>Logout</button>
         </>
