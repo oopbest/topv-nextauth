@@ -28,7 +28,7 @@ export const authOptions = {
   callbacks: {
     session: async ({ session, user }) => {
       session.customValue = new Date().toISOString();
-      session.name = user.name
+      session.customName = user
       return Promise.resolve(session);
     },
   },
