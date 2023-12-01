@@ -9,6 +9,7 @@ export const authOptions = {
       clientId: process.env.APPLE_CLIENT_ID,
       clientSecret: process.env.APPLE_CLIENT_SECRET,
       authorization: { params: { scope: "name email", response_mode: "form_post" } },
+      idToken: true,
     }),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
