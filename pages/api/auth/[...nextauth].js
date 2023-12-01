@@ -7,7 +7,7 @@ export const authOptions = {
   providers: [
     AppleProvider({
       clientId: process.env.APPLE_CLIENT_ID,
-      clientSecret: process.env.APPLE_CLIENT_SECRET,
+      clientSecret: process.env.APPLE_CLIENT_SECRET
     }),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
@@ -26,12 +26,8 @@ export const authOptions = {
     },
   },
   callbacks: {
-    session: async ({ session, token, user }) => {
-      // session.customValue = new Date().toISOString();
-      // session.user = user
-      session.accessToken = token.accessToken
-      session.user.id = token.id
-
+    session: async ({ session }) => {
+      session.customValue = new Date().toISOString();
       return Promise.resolve(session);
     },
   },
