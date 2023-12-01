@@ -42,7 +42,7 @@ export default function Home() {
       {/* {loginElem} */}
       {session && session.user ? (
         <>
-          <h3>Debug x4</h3>
+          <h3>Debug x5</h3>
           <h5>{session.user?.name}</h5>
           <h5>{session.user?.email}</h5>
           <button onClick={() => signOut()}>Logout</button>
