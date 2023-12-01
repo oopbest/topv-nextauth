@@ -8,8 +8,6 @@ export const authOptions = {
     AppleProvider({
       clientId: process.env.APPLE_CLIENT_ID,
       clientSecret: process.env.APPLE_CLIENT_SECRET,
-      authorization: { params: { scope: "name email", response_mode: "form_post" } },
-      idToken: true,
     }),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
@@ -28,8 +26,9 @@ export const authOptions = {
     },
   },
   callbacks: {
-    session: async ({ session }) => {
+    session: async ({ session, token, user }) => {
       session.customValue = new Date().toISOString();
+      session.user = user
       return Promise.resolve(session);
     },
   },
