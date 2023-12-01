@@ -25,10 +25,10 @@ export const authOptions = {
       },
     },
   },
+  secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
-    session: async ({ session, user }) => {
+    session: async ({ session }) => {
       session.customValue = new Date().toISOString();
-      session.customName = user
       return Promise.resolve(session);
     },
   },
