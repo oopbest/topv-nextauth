@@ -8,7 +8,6 @@ export const authOptions = {
     AppleProvider({
       clientId: process.env.APPLE_CLIENT_ID,
       clientSecret: process.env.APPLE_CLIENT_SECRET,
-      redirectURI: "https://topv-signin.vercel.app/foobarss"
     }),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
