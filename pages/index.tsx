@@ -6,7 +6,9 @@ export default function Home() {
     signIn("google");
   };
   const handleLoginWithApple = () => {
-    signIn("apple");
+    signIn("apple", {
+      callbackUrl: "https://topv-signin.vercel.app/customer/account",
+    });
   };
   let loginElem = (
     <>
