@@ -2,13 +2,11 @@ import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Home() {
   const { data: session } = useSession();
-  console.log(session);
   const handleLoginWithGoogle = () => {
     signIn("google");
   };
   const handleLoginWithApple = () => {
-    // console.log('Ouch')
-    signIn("apple");
+    signIn("apple", { callbackUrl: "/customer/account" });
   };
   let loginElem = (
     <>
