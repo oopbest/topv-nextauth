@@ -32,7 +32,15 @@ export default function Home() {
       <div>
         <p>Debug </p>
         Logged in as {session.user.email}
-        <button onClick={() => signOut()}>Logout</button>
+        <button
+          onClick={() =>
+            signOut({
+              callbackUrl: "/",
+            })
+          }
+        >
+          Logout
+        </button>
       </div>
     );
   }
