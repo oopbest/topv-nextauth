@@ -10,7 +10,15 @@ export default function MyProfile() {
       {session && session.user ? (
         <>
           <h5>{session.user.email}</h5>
-          <button onClick={() => signOut()}>Logout</button>
+          <button
+            onClick={() =>
+              signOut({
+                callbackUrl: "/",
+              })
+            }
+          >
+            Logout
+          </button>
         </>
       ) : (
         ""
