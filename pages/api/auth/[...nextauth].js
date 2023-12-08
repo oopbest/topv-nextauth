@@ -4,17 +4,6 @@ import GoogleProvider from "next-auth/providers/google";
 
 
 export const authOptions = {
-  cookies: {
-    callbackUrl: {
-      name: `__Secure-next-auth.callback-url`,
-      options: {
-        httpOnly: false,
-        sameSite: "none",
-        path: "/",
-        secure: true,
-      },
-    },
-  },
   providers: [
     AppleProvider({
       authorization: {
@@ -35,6 +24,15 @@ export const authOptions = {
   cookies: {
     pkceCodeVerifier: {
       name: "next-auth.pkce.code_verifier",
+      options: {
+        httpOnly: false,
+        sameSite: "none",
+        path: "/",
+        secure: true,
+      },
+    },
+    callbackUrl: {
+      name: `__Secure-next-auth.callback-url`,
       options: {
         httpOnly: false,
         sameSite: "none",
