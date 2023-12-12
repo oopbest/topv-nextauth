@@ -1,20 +1,29 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { BrowserView, MobileView } from "react-device-detect";
+import { useEffect } from "react";
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile,
+} from "react-device-detect";
 
 export default function Document() {
+  useEffect(() => {
+    console.log("dsjfldsjfl");
+  }, []);
   return (
     <Html lang="en">
       <Head />
       <body>
-        <BrowserView>I am rendered on: Desktop</BrowserView>
-        <MobileView>I am rendered on: Mobile</MobileView>
         <Main />
         <NextScript />
       </body>
 
       <>
-        <div id="fb-root"></div>
-        <div id="fb-customer-chat" className="fb-customerchat"></div>
+        <div className="sidebar">
+          <div id="fb-root"></div>
+          <div id="fb-customer-chat" className="fb-customerchat"></div>
+        </div>
 
         <script
           dangerouslySetInnerHTML={{
