@@ -20,7 +20,7 @@ export default function Document() {
       </body>
 
       <>
-        <div className="sidebar">
+        <div className="d-sm-none d-md-block">
           <div id="fb-root"></div>
           <div id="fb-customer-chat" className="fb-customerchat"></div>
         </div>
