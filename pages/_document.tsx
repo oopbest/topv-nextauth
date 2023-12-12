@@ -2,6 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 import { isMobile } from "react-device-detect";
 
 export default function Document() {
+  console.log("xx", isMobile);
   return (
     <Html lang="en">
       <Head />
