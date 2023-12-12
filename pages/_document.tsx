@@ -1,12 +1,13 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { isMobile } from "react-device-detect";
+import { BrowserView, MobileView } from "react-device-detect";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head />
       <body>
-        <div>I am rendered on: {isMobile ? "Mobile" : "Desktop"}</div>
+        <BrowserView>I am rendered on: Desktop</BrowserView>
+        <MobileView>I am rendered on: Mobile</MobileView>
         <Main />
         <NextScript />
       </body>
