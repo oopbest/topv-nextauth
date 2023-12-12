@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { isMobile } from "react-device-detect";
 
 export default function Document() {
   return (
@@ -12,9 +13,10 @@ export default function Document() {
       <>
         <div id="fb-root"></div>
         <div id="fb-customer-chat" className="fb-customerchat"></div>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: ` chatbox = document.getElementById('fb-customer-chat');
+        {!isMobile && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: ` chatbox = document.getElementById('fb-customer-chat');
                 chatbox.setAttribute("page_id", "397245167074344");
                 chatbox.setAttribute("attribution", "biz_inbox");
                 </script>
@@ -32,8 +34,9 @@ export default function Document() {
                 js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
                 fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));`,
-          }}
-        ></script>
+            }}
+          ></script>
+        )}
       </>
     </Html>
   );
