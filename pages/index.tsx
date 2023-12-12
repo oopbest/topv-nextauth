@@ -1,4 +1,5 @@
 import { signIn, signOut, useSession } from "next-auth/react";
+import "bootstrap/dist/css/bootstrap.css";
 
 export default function Home() {
   const { data: session } = useSession();

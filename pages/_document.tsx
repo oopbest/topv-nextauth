@@ -1,16 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { useEffect } from "react";
-import {
-  BrowserView,
-  MobileView,
-  isBrowser,
-  isMobile,
-} from "react-device-detect";
 
 export default function Document() {
-  useEffect(() => {
-    console.log("dsjfldsjfl");
-  }, []);
   return (
     <Html lang="en">
       <Head />
@@ -24,6 +14,7 @@ export default function Document() {
           <div id="fb-root"></div>
           <div id="fb-customer-chat" className="fb-customerchat"></div>
         </div>
+        <div className="d-none d-md-block">show only desktop size</div>
 
         <script
           dangerouslySetInnerHTML={{
