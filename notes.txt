@@ -1,0 +1,7 @@
+https://appleid.apple.com/auth/authorize?client_id=com.mercular.web&redirect_uri=https%3A%2F%2Fwww.mercular.com%2F&response_type=code%20id_token&scope=email&response_mode=web_message&frame_id=9fe0acda-45ef-4ea5-9300-78fdf29976e1&m=11&v=1.5.5
+
+https://appleid.apple.com/auth/authorize?client_id=client.app.vercel.topv-signin&scope=name%20email&response_type=code&redirect_uri=https%3A%2F%2Ftopv-signin.vercel.app%2Fapi%2Fauth%2Fcallback%2Fapple&response_mode=form_post&code_challenge=AzEQvQmPhRYo8IDe4NyfwoCYikhaXrAs2dgmEwd5kvU&code_challenge_method=S256
+
+https://appleid.apple.com/auth/authorize?client_id=client.app.vercel.topv-signin&scope=name%20email&response_type=code&redirect_uri=https%3A%2F%2Ftopv-signin.vercel.app%2Fapi%2Fauth%2Fcallback%2Fapple&response_mode=form_post&code_challenge=Uy8sjR_S5yncst7_PvrWg9rcfHWoBUSm2jgBtheC8GQ&code_challenge_method=S256
+
+https://appleid.apple.com/auth/authorize?client_id=client.com.topvalue&scope=name%20email&response_type=code&redirect_uri=https%3A%2F%2Ftopvalue.com%2Fapi%2Fauth%2Fcallback%2Fapple&response_mode=form_post&code_challenge=l7wgH8cUP1SXO5lb6KjbwvzzUIWhncvAjHjX8dcdPak&code_challenge_method=S256
